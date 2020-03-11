@@ -27,10 +27,15 @@ namespace DesafioUmHelp.WebApi.Domain
         [DataType(DataType.Currency)]
         public decimal ValorProduto { get; set; }
 
-        public int IdTiposUsuarios { get; set; }
+        public int IdUsuarios { get; set; }
 
         //Define chave estrangeira
         [ForeignKey("Id")]
-        public TiposUsuarios TiposUsuarios { get; set; }
+        public Usuarios Usuarios { get; set; }
+
+        public int IdDesconto { get; set; }
+
+        [ForeignKey("Id")]
+        public Descontos Descontos { get; set; }
     }
 }

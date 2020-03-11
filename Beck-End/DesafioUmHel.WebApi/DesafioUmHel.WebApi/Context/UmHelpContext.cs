@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesafioUmHelp.WebApi.Context
 {
-    public class UmHelpContext
+    public class UmHelpContext : DbContext
     {
         public DbSet<TiposUsuarios> TiposUsuarios { get; set; }
         public DbSet<Descontos> Descontos { get; set; }

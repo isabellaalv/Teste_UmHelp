@@ -7875,11 +7875,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wnova\\Desktop\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\DesafioUmHelp.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\Beck-End\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\DesafioUmHelp.WebApi.csproj",
       "projectName": "DesafioUmHelp.WebApi",
-      "projectPath": "C:\\Users\\wnova\\Desktop\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\DesafioUmHelp.WebApi.csproj",
+      "projectPath": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\Beck-End\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\DesafioUmHelp.WebApi.csproj",
       "packagesPath": "C:\\Users\\wnova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wnova\\Desktop\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\Beck-End\\DesafioUmHel.WebApi\\DesafioUmHel.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
