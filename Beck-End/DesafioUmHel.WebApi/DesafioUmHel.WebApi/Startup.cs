@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace Senai.Senatur.WebApi
+namespace DesafioUmHelp.WebApi
 {
     public class Startup
     {
@@ -63,10 +63,10 @@ namespace Senai.Senatur.WebApi
                     ClockSkew = TimeSpan.FromMinutes(30),
 
                     // Nome da issuer, de onde está vindo
-                    ValidIssuer = "Senai.Senatur.WebApi",
+                    ValidIssuer = "DesafioUmHelp.WebApi",
 
                     // Nome da audience, de onde está vindo
-                    ValidAudience = "Senai.Senatur.WebApi"
+                    ValidAudience = "DesafioUmHelp.WebApi"
                 };
             });
         }
@@ -86,7 +86,7 @@ namespace Senai.Senatur.WebApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Senai.Senatur.WebApi");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DesafioUmHelp.WebApi");
             });
 
             // Habilita o uso de autenticação

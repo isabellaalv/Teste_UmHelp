@@ -13,20 +13,10 @@ namespace DesafioUmHelp.WebApi.Repository
     {
         UmHelpContext ctx = new UmHelpContext();
 
-        public void Atualizar(int Id, Produtos produtos)
+        public void Atualizar(Produtos produtos)
         {
-            Produtos produtosBuscados = ctx.Produtos.Find(Id);
-            produtosBuscados.ValorProduto = produtos.ValorProduto;
-            produtosBuscados.Data = produtos.Data;
-            produtosBuscados.IdUsuarios = produtos.IdUsuarios;
-            produtosBuscados.IdDesconto = produtos.IdDesconto;
-            ctx.Produtos.Update(produtosBuscados);
+            ctx.Produtos.Update(produtos);
             ctx.SaveChanges();
-        }
-
-        public List<Produtos> BuscarComDescontos()
-        {
-            return ctx.Produtos.Include(x => x.Descontos).ToList();
         }
 
         public Produtos BuscarPorId(int Id)
@@ -42,8 +32,8 @@ namespace DesafioUmHelp.WebApi.Repository
 
         public void Deletar(int Id)
         {
-            Produtos produtosBuscados = ctx.Produtos.Find(Id);
-            ctx.Produtos.Remove(produtosBuscados);
+            Produtos produtos = ctx.Produtos.Find(Id);
+            ctx.Produtos.Remove(produtos);
             ctx.SaveChanges();
         }
 

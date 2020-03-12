@@ -19,7 +19,6 @@ namespace DesafioUmHelp.WebApi.Repository
             Descontos descontoBuscado = ctx.Descontos.Find(Id);
             //Atribui os valores que tem que ser passado no campo
             descontoBuscado.Ativo = descontos.Ativo;
-            descontoBuscado.Tipo = descontos.Tipo;
             descontoBuscado.Valor = descontos.Valor;
             descontoBuscado.IdUsuario = descontos.IdUsuario;
             //Atualiza o desconto buscado
@@ -39,10 +38,9 @@ namespace DesafioUmHelp.WebApi.Repository
             ctx.SaveChanges(); 
         }
 
-        public void Deletar(int Id)
+        public void Deletar(Descontos descontos)
         {
-            Descontos descontoBuscado = ctx.Descontos.Find(Id);
-            ctx.Remove(descontoBuscado);
+            ctx.Descontos.Remove(descontos);
             ctx.SaveChanges();
         }
 

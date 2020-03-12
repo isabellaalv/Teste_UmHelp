@@ -12,6 +12,7 @@ namespace DesafioUmHelp.WebApi.Context
         public DbSet<TiposUsuarios> TiposUsuarios { get; set; }
         public DbSet<Descontos> Descontos { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Pedidos> Pedidos { get; set; }
         public DbSet<Produtos> Produtos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,7 +20,7 @@ namespace DesafioUmHelp.WebApi.Context
             if (!optionsBuilder.IsConfigured)
             {
                 //optionsBuilder.UseSqlServer("Data Source=DEV1\\SQLEXPRESS; initial catalog=Senatur_Tarde; user Id=sa; pwd=sa@132;");
-                //optionsBuilder.UseSqlServer("Data Source=DEV16\\SQLEXPRESS; initial catalog=Senatur_Tarde; user Id=sa; pwd=sa@132;");
+                optionsBuilder.UseSqlServer("Data Source=ANA\\SQLEXPRESS; initial catalog=UmHelp;");
             }
         }
 
@@ -31,6 +32,8 @@ namespace DesafioUmHelp.WebApi.Context
             builder.Entity<Descontos>();
 
             builder.Entity<Usuarios>();
+
+            builder.Entity<Pedidos>();
 
             builder.Entity<Produtos>();
         }

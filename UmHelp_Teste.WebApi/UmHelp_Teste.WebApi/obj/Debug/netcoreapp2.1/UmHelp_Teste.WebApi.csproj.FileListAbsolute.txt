@@ -1,0 +1,14 @@
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.deps.json
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.runtimeconfig.json
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.runtimeconfig.dev.json
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.dll
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\bin\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.pdb
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.csprojAssemblyReference.cache
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.RazorAssemblyInfo.cache
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.RazorAssemblyInfo.cs
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.AssemblyInfoInputs.cache
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.AssemblyInfo.cs
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.dll
+C:\Users\wnova\Desktop\umhelpteste\UmHelp_Teste.WebApi\UmHelp_Teste.WebApi\obj\Debug\netcoreapp2.1\UmHelp_Teste.WebApi.pdb

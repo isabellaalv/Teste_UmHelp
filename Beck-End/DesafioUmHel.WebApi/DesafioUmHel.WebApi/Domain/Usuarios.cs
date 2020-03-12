@@ -33,7 +33,7 @@ namespace DesafioUmHelp.WebApi.Domain
         public int IdTiposUsuarios { get; set; }
 
         //Define chave estrangeira
-        [ForeignKey("Id")]
+        [ForeignKey("IdTipoUsuarios")]
         public TiposUsuarios TiposUsuarios { get; set; }
     }
 }

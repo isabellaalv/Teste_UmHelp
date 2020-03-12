@@ -24,6 +24,6 @@ namespace DesafioUmHelp.WebApi.Interfaces
         void Atualizar(int Id, Descontos descontos);
 
         //Deleta um desconto
-        void Deletar(int Id);
+        void Deletar(Descontos descontos);
     }
 }
