@@ -25,5 +25,18 @@ namespace UmHelp_Teste.WebApi.Domains
 
         [ForeignKey("IdUsuarios")]
         public Usuarios Usuarios { get; set; }
+
+        public void AlteraParaInativo()
+        {
+            Ativo = false;
+        }
+
+        public void AlteraInformacoes(decimal valor, bool ativo, int idusuarios)
+        {
+            Valor = valor;
+            Ativo = ativo;
+            IdUsuarios = idusuarios;
+
+        }
     }
 }

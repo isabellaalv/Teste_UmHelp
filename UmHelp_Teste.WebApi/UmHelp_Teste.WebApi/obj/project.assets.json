@@ -11650,27 +11650,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wnova\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\50323919804\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\50323919804\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
       "projectName": "UmHelp_Teste.WebApi",
-      "projectPath": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
-      "packagesPath": "C:\\Users\\wnova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\obj\\",
+      "projectPath": "C:\\Users\\50323919804\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
+      "packagesPath": "C:\\Users\\50323919804\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\50323919804\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\wnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\50323919804\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -11717,13 +11714,12 @@
             "version": "[2.1.14, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.14, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -11742,16 +11738,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

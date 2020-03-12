@@ -19,7 +19,8 @@ namespace UmHelp_Teste.WebApi.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=ANA\\SQLEXPRESS; initial catalog=UmHelp;");
+                //optionsBuilder.UseSqlServer("Data Source=ANA\\SQLEXPRESS; initial catalog=UmHelp;");
+                optionsBuilder.UseSqlServer("Data Source=DEV16\\SQLEXPRESS; initial catalog=UmHelp; user Id=sa; pwd=sa@132; ");
             }
         }
         protected override void OnModelCreating(ModelBuilder builder)

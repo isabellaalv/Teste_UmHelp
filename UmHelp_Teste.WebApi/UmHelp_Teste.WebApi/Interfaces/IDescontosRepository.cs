@@ -14,11 +14,12 @@ namespace UmHelp_Teste.WebApi.Interfaces
         //Busca desconto por Id
         Descontos BuscarPorId(int Id);
 
-        //Lista o valor do desconto maior
-        List<Descontos> MaiorDesconto();
+        List<Descontos> BuscarTodosPorId(int Id);
 
         //Lista descontos ativos
         List<Descontos> Ativos();
+
+        Descontos MaiorDescontoPorId(int Id);
 
         //Lista descontos e usuários que contém o desconto
         List<Descontos> ListaComUsuarios();
@@ -31,6 +32,7 @@ namespace UmHelp_Teste.WebApi.Interfaces
 
         //Deleta um desconto
         void Deletar(Descontos descontos);
+
 
     }
 }
