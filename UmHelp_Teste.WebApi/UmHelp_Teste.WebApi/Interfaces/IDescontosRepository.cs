@@ -19,7 +19,7 @@ namespace UmHelp_Teste.WebApi.Interfaces
         //Lista descontos ativos
         List<Descontos> Ativos();
 
-        Descontos MaiorDescontoPorId(int Id);
+        List<Descontos> MaiorDescontoPorId(int Id);
 
         //Lista descontos e usuários que contém o desconto
         List<Descontos> ListaComUsuarios();

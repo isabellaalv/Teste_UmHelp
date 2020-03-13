@@ -42,5 +42,26 @@ namespace UmHelp_Teste.WebApi.Controllers
             _usuariosRepository.Cadastrar(usuarios);
             return StatusCode(201);
         }
+
+        [HttpPut("{Id}")]
+        public IActionResult Put(int Id, Usuarios usuarios)
+        {
+            var AtualizaUsuario = _usuariosRepository.BuscarPorId(Id);
+            if (AtualizaUsuario == null)
+                return NotFound("Usuario não encontrado");
+            AtualizaUsuario.AtualizaInformacao(usuarios.Email, usuarios.Senha, usuarios.IdTiposUsuarios);
+            _usuariosRepository.Atualizar(AtualizaUsuario);
+            return Ok(AtualizaUsuario);
+        }
+
+        [HttpDelete("{Id}")]
+        public IActionResult Deletar (int Id, Usuarios usuarios)
+        {
+            var AtualizaUsuario = _usuariosRepository.BuscarPorId(Id);
+            if (AtualizaUsuario == null)
+                return NotFound("Usuario não encontrado");
+            return Ok("Usuario deletado");
+        }
     }
+
 }

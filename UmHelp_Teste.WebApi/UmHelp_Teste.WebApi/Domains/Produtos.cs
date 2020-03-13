@@ -20,11 +20,15 @@ namespace UmHelp_Teste.WebApi.Domains
         [Column(TypeName = "DECIMAL")]
         public decimal Valor { get; set; }
 
+        [Column(TypeName = "DECIMAL")]
+        public decimal QtdEstoque { get; set; }
+
         public void AlteraInformacoes(string nomeProduto, decimal valor)
         {
             NomeProduto = nomeProduto;
             Valor = valor;
         }
+
 
     }
 }

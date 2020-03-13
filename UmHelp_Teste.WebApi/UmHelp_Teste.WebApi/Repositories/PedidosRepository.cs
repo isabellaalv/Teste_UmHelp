@@ -30,6 +30,17 @@ namespace UmHelp_Teste.WebApi.Repositories
             ctx.SaveChanges();
         }
 
+        public List<Pedidos> DadosdoUsuario(int Id)
+        {
+            
+            var Pedidos = ctx.Pedidos.Include(x => x.Usuarios).Where(x => x.Id == Id).ToList();
+
+            if (Pedidos.Count == 0)
+                return null;
+
+            return Pedidos;
+        }
+
         public void Deletar(Pedidos pedidos)
         {
             ctx.Pedidos.Remove(pedidos);

@@ -2,24 +2,25 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DesafioUmHelp.WebApi.Migrations
+namespace UmHelp_Teste.WebApi.Migrations
 {
-    public partial class UmHelp : Migration
+    public partial class UmHelp_Db : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Produtos",
+                name: "Produto",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeProduto = table.Column<string>(type: "VARCHAR(255)", nullable: true),
-                    Valor = table.Column<decimal>(type: "DECIMAL", nullable: false)
+                    Valor = table.Column<decimal>(type: "DECIMAL", nullable: false),
+                    QtdEstoque = table.Column<decimal>(type: "DECIMAL", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produtos", x => x.Id);
+                    table.PrimaryKey("PK_Produto", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,43 +44,43 @@ namespace DesafioUmHelp.WebApi.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Email = table.Column<string>(type: "VARCHAR(255)", nullable: false),
                     Senha = table.Column<string>(type: "VARCHAR(255)", nullable: false),
-                    IdTiposUsuarios = table.Column<int>(nullable: false)
+                    IdTiposUsuarios = table.Column<int>(nullable: false),
+                    IdTipoUsuarios = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Usuarios_TiposUsuarios_Id",
-                        column: x => x.Id,
+                        name: "FK_Usuarios_TiposUsuarios_IdTipoUsuarios",
+                        column: x => x.IdTipoUsuarios,
                         principalTable: "TiposUsuarios",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "DescontosDeProdutos",
+                name: "Desconto",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Valor = table.Column<decimal>(type: "DECIMAL", nullable: false),
                     Ativo = table.Column<bool>(type: "BIT", nullable: false),
-                    IdUsuario = table.Column<int>(nullable: false),
-                    IdUsuarios = table.Column<int>(nullable: true)
+                    IdUsuarios = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DescontosDeProdutos", x => x.Id);
+                    table.PrimaryKey("PK_Desconto", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DescontosDeProdutos_Usuarios_IdUsuarios",
+                        name: "FK_Desconto_Usuarios_IdUsuarios",
                         column: x => x.IdUsuarios,
                         principalTable: "Usuarios",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Pedidos",
+                name: "Pedido",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -91,47 +92,89 @@ namespace DesafioUmHelp.WebApi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pedidos", x => x.Id);
+                    table.PrimaryKey("PK_Pedido", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Pedidos_Produtos_IdProduto",
+                        name: "FK_Pedido_Produto_IdProduto",
                         column: x => x.IdProduto,
-                        principalTable: "Produtos",
+                        principalTable: "Produto",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Pedidos_Usuarios_IdUsuarios",
+                        name: "FK_Pedido_Usuarios_IdUsuarios",
                         column: x => x.IdUsuarios,
                         principalTable: "Usuarios",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Produto",
+                columns: new[] { "Id", "NomeProduto", "QtdEstoque", "Valor" },
+                values: new object[,]
+                {
+                    { 1, "Candida", 35m, 50m },
+                    { 2, "Cloro", 40m, 60m }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TiposUsuarios",
+                columns: new[] { "Id", "Titulo" },
+                values: new object[,]
+                {
+                    { 1, "Adm" },
+                    { 2, "Comum" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Usuarios",
+                columns: new[] { "Id", "Email", "IdTipoUsuarios", "IdTiposUsuarios", "Senha" },
+                values: new object[,]
+                {
+                    { 1, "adm@adm.com", null, 1, "adm123" },
+                    { 2, "comum@comum.com", null, 2, "comum132" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Desconto",
+                columns: new[] { "Id", "Ativo", "IdUsuarios", "Valor" },
+                values: new object[] { 1, true, 1, 30m });
+
+            migrationBuilder.InsertData(
+                table: "Desconto",
+                columns: new[] { "Id", "Ativo", "IdUsuarios", "Valor" },
+                values: new object[] { 2, true, 2, 20m });
+
             migrationBuilder.CreateIndex(
-                name: "IX_DescontosDeProdutos_IdUsuarios",
-                table: "DescontosDeProdutos",
+                name: "IX_Desconto_IdUsuarios",
+                table: "Desconto",
                 column: "IdUsuarios");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pedidos_IdProduto",
-                table: "Pedidos",
+                name: "IX_Pedido_IdProduto",
+                table: "Pedido",
                 column: "IdProduto");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pedidos_IdUsuarios",
-                table: "Pedidos",
+                name: "IX_Pedido_IdUsuarios",
+                table: "Pedido",
                 column: "IdUsuarios");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Usuarios_IdTipoUsuarios",
+                table: "Usuarios",
+                column: "IdTipoUsuarios");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DescontosDeProdutos");
+                name: "Desconto");
 
             migrationBuilder.DropTable(
-                name: "Pedidos");
+                name: "Pedido");
 
             migrationBuilder.DropTable(
-                name: "Produtos");
+                name: "Produto");
 
             migrationBuilder.DropTable(
                 name: "Usuarios");

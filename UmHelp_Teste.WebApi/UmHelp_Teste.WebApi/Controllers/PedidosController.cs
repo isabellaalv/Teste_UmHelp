@@ -33,23 +33,31 @@ namespace UmHelp_Teste.WebApi.Controllers
         [HttpPost]
         public IActionResult CadastrarPedido(Pedidos pedido)
         {
-            var Pedidodb = _produtosRepository.BuscarPorId(pedido.IdProduto);
-            if (Pedidodb == null)
+            var Produtodb = _produtosRepository.BuscarPorId(pedido.IdProduto);
+            if (Produtodb == null)
                 return NotFound("Produto não existe");
 
             var Usuariodb = _usuariosRepository.BuscarPorId(pedido.IdUsuarios);
             if (Usuariodb == null)
                 return NotFound("Usuarios não encontrado");
 
-            var Desconto = _descontosRepository.MaiorDescontoPorId(pedido.IdUsuarios);
-            if(Desconto != null)
+            var Descontos = _descontosRepository.MaiorDescontoPorId(pedido.IdUsuarios);
+
+            if (Descontos != null)
             {
+                //Pega o maior desconto
+                var desconto = Descontos.OrderByDescending(x => x.Valor).First();
+
                 //pedido.ValorProduto -= Desconto.Valor;
-                pedido.ValorProduto = pedido.ValorProduto - Desconto.Valor;
+                pedido.ValorProduto = Produtodb.Valor - desconto.Valor;
 
-                Desconto.AlteraParaInativo();
+                desconto.AlteraParaInativo();
 
-                _descontosRepository.Atualizar(Desconto);
+                _descontosRepository.Atualizar(desconto);
+            }
+            else
+            {
+                pedido.ValorProduto = Produtodb.Valor;
             }
 
 

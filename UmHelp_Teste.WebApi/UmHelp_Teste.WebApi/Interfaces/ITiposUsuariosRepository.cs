@@ -13,6 +13,7 @@ namespace UmHelp_Teste.WebApi.Interfaces
 
         //Busca tipos usuarios por Id
         TiposUsuarios BuscarPorId(int Id);
+
         //Cadastra um tipo de usuário
         void Cadastrar(TiposUsuarios tiposUsuarios);
     }

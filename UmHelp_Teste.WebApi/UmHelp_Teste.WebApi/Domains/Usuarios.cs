@@ -34,5 +34,12 @@ namespace UmHelp_Teste.WebApi.Domains
         //Define chave estrangeira
         [ForeignKey("IdTipoUsuarios")]
         public TiposUsuarios TiposUsuarios { get; set; }
+
+        public void AtualizaInformacao (string email, string senha, int idTiposUsuarios)
+        {
+            Email = email;
+            Senha = senha;
+            IdTiposUsuarios = idTiposUsuarios;
+        }
     }
 }

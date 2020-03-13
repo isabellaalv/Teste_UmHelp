@@ -56,11 +56,9 @@ namespace UmHelp_Teste.WebApi.Repositories
             return ctx.Descontos.Include(x => x.Usuarios).ToList();
         }
 
-        public Descontos MaiorDescontoPorId(int Id)
+        public List<Descontos> MaiorDescontoPorId(int Id)
         {
-            return ctx.Descontos.Where(x => x.Id == Id && x.Ativo == true)
-                .OrderByDescending(x => x.Valor)
-                .First();
+            return ctx.Descontos.Where(x => x.Id == Id && x.Ativo == true).ToList();        
         }
     }
 }

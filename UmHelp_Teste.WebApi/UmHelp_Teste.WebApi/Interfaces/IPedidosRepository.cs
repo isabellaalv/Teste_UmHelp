@@ -10,6 +10,7 @@ namespace UmHelp_Teste.WebApi.Interfaces
     {
         List<Pedidos> Get();
         Pedidos BuscarPorId(int Id);
+        List<Pedidos> DadosdoUsuario(int Id);
         List<Pedidos> GetByIdUsuario();
         void Cadastrar(Pedidos pedidos);
         void Atualizar(Pedidos pedidos);

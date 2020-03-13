@@ -38,6 +38,11 @@ namespace UmHelp_Teste.WebApi.Migrations
                     b.HasIndex("IdUsuarios");
 
                     b.ToTable("Desconto");
+
+                    b.HasData(
+                        new { Id = 1, Ativo = true, IdUsuarios = 1, Valor = 30m },
+                        new { Id = 2, Ativo = true, IdUsuarios = 2, Valor = 20m }
+                    );
                 });
 
             modelBuilder.Entity("UmHelp_Teste.WebApi.Domains.Pedidos", b =>
@@ -74,12 +79,20 @@ namespace UmHelp_Teste.WebApi.Migrations
                     b.Property<string>("NomeProduto")
                         .HasColumnType("VARCHAR(255)");
 
+                    b.Property<decimal>("QtdEstoque")
+                        .HasColumnType("DECIMAL");
+
                     b.Property<decimal>("Valor")
                         .HasColumnType("DECIMAL");
 
                     b.HasKey("Id");
 
                     b.ToTable("Produto");
+
+                    b.HasData(
+                        new { Id = 1, NomeProduto = "Candida", QtdEstoque = 35m, Valor = 50m },
+                        new { Id = 2, NomeProduto = "Cloro", QtdEstoque = 40m, Valor = 60m }
+                    );
                 });
 
             modelBuilder.Entity("UmHelp_Teste.WebApi.Domains.TiposUsuarios", b =>
@@ -94,6 +107,11 @@ namespace UmHelp_Teste.WebApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TiposUsuarios");
+
+                    b.HasData(
+                        new { Id = 1, Titulo = "Adm" },
+                        new { Id = 2, Titulo = "Comum" }
+                    );
                 });
 
             modelBuilder.Entity("UmHelp_Teste.WebApi.Domains.Usuarios", b =>
@@ -119,6 +137,11 @@ namespace UmHelp_Teste.WebApi.Migrations
                     b.HasIndex("IdTipoUsuarios");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new { Id = 1, Email = "adm@adm.com", IdTiposUsuarios = 1, Senha = "adm123" },
+                        new { Id = 2, Email = "comum@comum.com", IdTiposUsuarios = 2, Senha = "comum132" }
+                    );
                 });
 
             modelBuilder.Entity("UmHelp_Teste.WebApi.Domains.Descontos", b =>
