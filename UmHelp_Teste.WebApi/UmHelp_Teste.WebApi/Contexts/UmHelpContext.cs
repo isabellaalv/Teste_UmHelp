@@ -20,6 +20,7 @@ namespace UmHelp_Teste.WebApi.Contexts
             
             if (!optionsBuilder.IsConfigured)
             {
+                //colocar seu banco
                 //optionsBuilder.UseSqlServer("Data Source=ANA\\SQLEXPRESS; initial catalog=UmHelp;");
                 optionsBuilder.UseSqlServer("Data Source=DEV16\\SQLEXPRESS; initial catalog=UmHelp; user Id=sa; pwd=sa@132; ");
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj": {}
+    "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj": {
+    "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
         "projectName": "UmHelp_Teste.WebApi",
-        "projectPath": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
+        "projectPath": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi.csproj",
         "packagesPath": "C:\\Users\\wnova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wnova\\Desktop\\umhelpteste\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\wnova\\Desktop\\Teste_UmHelp\\UmHelp_Teste.WebApi\\UmHelp_Teste.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
